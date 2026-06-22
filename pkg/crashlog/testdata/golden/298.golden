@@ -1,0 +1,42 @@
+[14Jun2026 15:08:19] - Jetsam - iPhone18,1 iPhone OS 27.0 (24A5355q)
+Kernel: Darwin Kernel Version 27.0.0: Wed May 27 23:42:50 PDT 2026; root:xnu-13361.0.0.502.1~1/RELEASE_ARM64_T8150
+
+Killed Process: financed [44152]
+  Reason        per-process-limit (exceeded its per-process memory limit)
+  Resident      804 pages (13 MiB)
+  Internal      567 pages (8.9 MiB) resident / 220 pages (3.4 MiB) compressed
+  Lifetime Max  804 pages (13 MiB)
+  Priority      0
+  States        daemon, idle
+  CPU Time      0.387s
+
+Memory Status:
+  Page Size     16 KiB
+  Free          11,374 pages (178 MiB)
+  Active        195,361 pages (3.0 GiB)
+  Inactive      194,176 pages (3.0 GiB)
+  Wired         244,813 pages (3.7 GiB)
+  Anonymous     209,999 pages (3.2 GiB)
+  File-backed   180,593 pages (2.8 GiB)
+  Purgeable     12,902 pages (202 MiB)
+  Compressor    103,177 pages (1.6 GiB), 292,998 pages (4.5 GiB) uncompressed
+  Largest Zone  APFS_4K_OBJS (188 MiB)
+  Zone Map      573 MiB / 4.2 GiB cap
+
+Top Memory Consumers (827 total):
+   1: TGOnDeviceInferenceProviderServi  [33754]  31,574 pages (493 MiB)  prio=0    suspended
+   2: backboardd                        [76]     19,240 pages (301 MiB)  prio=170  active
+   3: Podcasts                          [18151]  18,748 pages (293 MiB)  prio=0    suspended
+   4: TGOnDeviceInferenceProviderServi  [475]    16,294 pages (255 MiB)  prio=0    suspended
+   5: SpringBoard                       [37]     15,965 pages (250 MiB)  prio=160  active,frontmost
+   6: localspeechrecognition            [17735]  14,098 pages (220 MiB)  prio=0    daemon,idle
+   7: YouTube                           [44117]  13,494 pages (211 MiB)  prio=100  active,frontmost
+   8: kernel_task                       [0]      9,556 pages (149 MiB)   prio=999  active
+   9: Maps                              [28732]  9,345 pages (146 MiB)   prio=0    suspended
+  10: ScreenshotServicesService         [18823]  8,575 pages (134 MiB)   prio=0    suspended
+  11: maps                              [28601]  6,956 pages (109 MiB)   prio=75   suspended
+  12: intelligenceflowd                 [2714]   5,916 pages (92 MiB)    prio=40   active
+  13: cameracaptured                    [73]     4,961 pages (78 MiB)    prio=140  active
+  14: Music                             [42158]  4,647 pages (73 MiB)    prio=0    suspended
+  15: Home                              [16447]  4,607 pages (72 MiB)    prio=75   suspended
+  ... 812 more (use --all to show every process)

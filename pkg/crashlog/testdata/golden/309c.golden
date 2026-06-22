@@ -1,0 +1,233 @@
+[18Mar2024 19:32:12] - Crash
+
+Process:        healthappd [46554]
+Path:           /System/Library/PrivateFrameworks/HealthPluginHost.framework/healthappd
+Parent:         launchd [1]
+Hardware Model: iPhone16,2
+OS Version:     iPhone OS 17.4
+BuildID:        21E219
+LockdownMode:            1
+Was Unlocked Since Boot: 1
+Is Locked:               0
+Shared Cache:        7b5c7e49-3341-312e-b251-78c081b39cc7 base: 0x190134000 size: 3681992704
+
+Exception Type:      EXC_BAD_ACCESS (SIGSEGV) 
+Exception Subtype:   KERN_INVALID_ADDRESS at 0x0000000000000010
+VM Region Info: 0x10 is not in any region.  Bytes before following region: 4371136496
+      REGION TYPE                 START - END      [ VSIZE] PRT/MAX SHRMOD  REGION DETAIL
+      UNUSED SPACE AT START
+--->  
+      __TEXT                   1048a4000-1048ec000 [  288K] r-x/r-x SM=COW  /System/Library/PrivateFrameworks/HealthPluginHost.framework/healthappd
+Thread 7051429: queue: com.apple.main-thread
+  00: libsystem_kernel.dylib 0x1e0871af8 mach_msg2_trap + 8
+  01: libsystem_kernel.dylib 0x1e0871890 mach_msg2_internal + 80
+  02: libsystem_kernel.dylib 0x1e08717a8 mach_msg_overwrite + 436
+  03: libsystem_kernel.dylib 0x1e08715e8 mach_msg + 24
+  04: CoreFoundation         0x19834401c __CFRunLoopServiceMachPort + 160
+  05: CoreFoundation         0x198341f04 __CFRunLoopRun + 1208
+  06: CoreFoundation         0x198341968 CFRunLoopRunSpecific + 608
+  07: Foundation             0x1971d04a8 -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 212
+  08: Foundation             0x1971ceff0 -[NSRunLoop(NSRunLoop) run] + 64
+  09: healthappd             0x1048adf74 
+  10: healthappd             0x1048a9458 
+  11: dyld                   0x1bb862d84 start + 2240
+
+Thread 7302460:
+  00: libsystem_pthread.dylib 0x1f42f8fb8 start_wqthread
+
+Thread 7307278: queue: com.apple.HealthKit.HKHealthStore.client.0x6061c8000
+  00: libsystem_kernel.dylib  0x1e087254c kevent_id + 8
+  01: libdispatch.dylib       0x1a022d7d4 _dispatch_kq_poll + 228
+  02: libdispatch.dylib       0x1a022cd18 _dispatch_event_loop_poke + 340
+  03: libdispatch.dylib       0x1a0229b50 _dispatch_mach_msg_send + 1264
+  04: libdispatch.dylib       0x1a0229cc0 _dispatch_mach_msg_send + 1632
+  05: libdispatch.dylib       0x1a0229210 _dispatch_mach_send_drain + 328
+  06: libdispatch.dylib       0x1a0225760 _dispatch_mach_send_msg + 352
+  07: libdispatch.dylib       0x1a0225fa8 dispatch_mach_send_with_result_and_async_reply_4libxpc + 116
+  08: libxpc.dylib            0x1f4349b9c _xpc_connection_enqueue + 164
+  09: libxpc.dylib            0x1f434aa1c xpc_connection_send_message_with_reply + 264
+  10: Foundation              0x1971c4af8 -[NSXPCConnection _sendInvocation:orArguments:count:methodSignature:selector:withProxy:] + 2140
+  11: Foundation              0x1971eadcc -[NSXPCConnection _sendSelector:withProxy:arg1:] + 116
+  12: Foundation              0x1971ead04 _NSXPCDistantObjectSimpleMessageSend1 + 60
+  13: HealthKit               0x1b0a8a1a4 __83-[HKQuery _queue_activateWithHealthStore:activationUUID:isReactivating:completion:]_block_invoke.96 + 152
+  14: libdispatch.dylib       0x1a020913c _dispatch_call_block_and_release + 32
+  15: libdispatch.dylib       0x1a020add4 _dispatch_client_callout + 20
+  16: libdispatch.dylib       0x1a0212400 _dispatch_lane_serial_drain + 748
+  17: libdispatch.dylib       0x1a0212f64 _dispatch_lane_invoke + 432
+  18: libdispatch.dylib       0x1a021dcb4 _dispatch_root_queue_drain_deferred_wlh + 288
+  19: libdispatch.dylib       0x1a021d528 _dispatch_workloop_worker_thread + 404
+  20: libsystem_pthread.dylib 0x1f42f8f20 _pthread_wqthread + 288
+  21: libsystem_pthread.dylib 0x1f42f8fc0 start_wqthread + 8
+
+Thread 7307443:
+  00: libsystem_pthread.dylib 0x1f42f8fb8 start_wqthread
+
+Thread 7307445:
+  00: libsystem_pthread.dylib 0x1f42f8fb8 start_wqthread
+
+Thread 7307446:
+  00: libsystem_pthread.dylib 0x1f42f8fb8 start_wqthread
+
+Thread 7307447: queue: DispatchQueueOrchestrationScheduler_generatorQueue_unspecified_pri (Crashed)
+  00: HealthPlatformCore      0x1d0742b94 
+  01: Combine                 0x1a172db08 Publishers.Map.Inner.receive(_:) + 168
+  02: Combine                 0x1a181e7d8 Publishers.Catch.Inner.receivePre(_:) + 180
+  03: Combine                 0x1a172e474 Publishers.Catch.Inner.UncaughtS.receive(_:) + 24
+  04: Combine                 0x1a172dd4c Publishers.FlatMap.Outer.receiveInner(_:_:) + 452
+  05: Combine                 0x1a172db7c Publishers.FlatMap.Outer.Side.receive(_:) + 24
+  06: Combine                 0x1a172142c Future.Conduit.request(_:) + 2440
+  07: Combine                 0x1a171eda8 protocol witness for Subscription.request(_:) in conformance ConduitBase<A, B> + 56
+  08: Combine                 0x1a1729b80 Publishers.FlatMap.Outer.receiveInner(subscription:_:) + 268
+  09: Combine                 0x1a1729a68 Publishers.FlatMap.Outer.Side.receive(subscription:) + 24
+  10: Combine                 0x1a1729814 Future.Conduit.subscribe() + 1044
+  11: Combine                 0x1a17292e8 Future.receive<A>(subscriber:) + 816
+  12: Combine                 0x1a1728fac protocol witness for Publisher.receive<A>(subscriber:) in conformance Future<A, B> + 24
+  13: Combine                 0x1a173fe48 Deferred.receive<A>(subscriber:) + 200
+  14: Combine                 0x1a1716544 PublisherBox.receive<A>(subscriber:) + 108
+  15: Combine                 0x1a17164cc AnyPublisher.receive<A>(subscriber:) + 64
+  16: Combine                 0x1a1716444 Publishers.FlatMap.Outer.receive(_:) + 524
+  17: Combine                 0x1a171622c protocol witness for Subscriber.receive(_:) in conformance Publishers.FlatMap<A, B>.Outer<A1> + 24
+  18: Combine                 0x1a172b184 Result.Publisher.Inner.request(_:) + 896
+  19: Combine                 0x1a172adf8 protocol witness for Subscription.request(_:) in conformance Result<A, B>.Publisher.Inner<A1> + 24
+  20: Combine                 0x1a17228a8 Publishers.FlatMap.Outer.receive(subscription:) + 328
+  21: Combine                 0x1a1722754 protocol witness for Subscriber.receive(subscription:) in conformance Publishers.FlatMap<A, B>.Outer<A1> + 24
+  22: Combine                 0x1a1719978 Result.Publisher.receive<A>(subscriber:) + 1180
+  23: Combine                 0x1a1717510 Publishers.FlatMap.receive<A>(subscriber:) + 420
+  24: Combine                 0x1a1716544 PublisherBox.receive<A>(subscriber:) + 108
+  25: Combine                 0x1a17164cc AnyPublisher.receive<A>(subscriber:) + 64
+  26: Combine                 0x1a1717d30 Publishers.Catch.receive<A>(subscriber:) + 388
+  27: Combine                 0x1a1716544 PublisherBox.receive<A>(subscriber:) + 108
+  28: Combine                 0x1a17164cc AnyPublisher.receive<A>(subscriber:) + 64
+  29: Combine                 0x1a1717334 Publishers.Map.receive<A>(subscriber:) + 444
+  30: Combine                 0x1a1716544 PublisherBox.receive<A>(subscriber:) + 108
+  31: Combine                 0x1a17164cc AnyPublisher.receive<A>(subscriber:) + 64
+  32: Combine                 0x1a1717d30 Publishers.Catch.receive<A>(subscriber:) + 388
+  33: Combine                 0x1a1716544 PublisherBox.receive<A>(subscriber:) + 108
+  34: Combine                 0x1a17164cc AnyPublisher.receive<A>(subscriber:) + 64
+  35: Combine                 0x1a171b0b4 Publishers.ReceiveOn.receive<A>(subscriber:) + 664
+  36: Combine                 0x1a1716544 PublisherBox.receive<A>(subscriber:) + 108
+  37: Combine                 0x1a17164cc AnyPublisher.receive<A>(subscriber:) + 64
+  38: Combine                 0x1a1717334 Publishers.Map.receive<A>(subscriber:) + 444
+  39: Combine                 0x1a1716544 PublisherBox.receive<A>(subscriber:) + 108
+  40: Combine                 0x1a17164cc AnyPublisher.receive<A>(subscriber:) + 64
+  41: Combine                 0x1a171b0b4 Publishers.ReceiveOn.receive<A>(subscriber:) + 664
+  42: Combine                 0x1a1716544 PublisherBox.receive<A>(subscriber:) + 108
+  43: Combine                 0x1a17164cc AnyPublisher.receive<A>(subscriber:) + 64
+  44: Combine                 0x1a1717510 Publishers.FlatMap.receive<A>(subscriber:) + 420
+  45: Combine                 0x1a1716544 PublisherBox.receive<A>(subscriber:) + 108
+  46: Combine                 0x1a17164cc AnyPublisher.receive<A>(subscriber:) + 64
+  47: Combine                 0x1a1716444 Publishers.FlatMap.Outer.receive(_:) + 524
+  48: Combine                 0x1a171622c protocol witness for Subscriber.receive(_:) in conformance Publishers.FlatMap<A, B>.Outer<A1> + 24
+  49: Combine                 0x1a172db2c Publishers.Map.Inner.receive(_:) + 204
+  50: Combine                 0x1a181e7d8 Publishers.Catch.Inner.receivePre(_:) + 180
+  51: Combine                 0x1a172e474 Publishers.Catch.Inner.UncaughtS.receive(_:) + 24
+  52: Combine                 0x1a172db2c Publishers.Map.Inner.receive(_:) + 204
+  53: Combine                 0x1a171a2f4 closure #1 in Publishers.ReceiveOn.Inner.receive(_:) + 284
+  54: libswiftDispatch.dylib  0x1a170ab54 thunk for @escaping @callee_guaranteed () -> () + 36
+  55: libdispatch.dylib       0x1a020913c _dispatch_call_block_and_release + 32
+  56: libdispatch.dylib       0x1a020add4 _dispatch_client_callout + 20
+  57: libdispatch.dylib       0x1a0212400 _dispatch_lane_serial_drain + 748
+  58: libdispatch.dylib       0x1a0212f64 _dispatch_lane_invoke + 432
+  59: libdispatch.dylib       0x1a0214284 _dispatch_workloop_invoke + 1756
+  60: libdispatch.dylib       0x1a021dcb4 _dispatch_root_queue_drain_deferred_wlh + 288
+  61: libdispatch.dylib       0x1a021d528 _dispatch_workloop_worker_thread + 404
+  62: libsystem_pthread.dylib 0x1f42f8f20 _pthread_wqthread + 288
+  63: libsystem_pthread.dylib 0x1f42f8fc0 start_wqthread + 8
+Thread 7307447 ARM_THREAD_STATE64
+   x0: 0x00000001fa3927b0
+   x1: 0x0000000000000000
+   x2: 0x864d0001d0eee7c4
+   x3: 0x126b000196f040d4 0x126b000000000000 type metadata accessor for Optional
+   x4: 0x0000000607064ab8
+   x5: 0x00000006068cf2b0
+   x6: 0x00000006068cf750
+   x7: 0x0000000607064b70
+   x8: 0x0000000000000000
+   x9: 0x0000000000000068
+  x10: 0x0000000000000077
+  x11: 0x000000016b89d0c0
+  x12: 0x0000000000000070
+  x13: 0x00000006068cece0
+  x14: 0x00000006068cece0
+  x15: 0x0000000607065a38
+  x16: 0x55480001f42f8fd0 0x5548000000000000 ___chkstk_darwin
+  x17: 0x00000001fe839468
+  x18: 0x0000000000000000
+  x19: 0x0000000000000000
+  x20: 0x000000016b89d020
+  x21: 0x0000000607064ab8
+  x22: 0x00000006068c3a60
+  x23: 0x00000001fa3927b0
+  x24: 0x0000000200fc6250 type metadata for Logger
+  x25: 0x00000001fbf281e8 value witness table for Builtin.UnknownObject
+  x26: 0x000000016b89cef0
+  x27: 0x000000016b89d260
+  x28: 0x0000000000000050
+   fp: 0x000000016b89d010
+   lr: 0x00000001d0742b70
+   sp: 0x000000016b89cda0
+   pc: 0x00000001d0742b94 matches_crash_frame=1
+  far: 0x0000000000000010
+ cpsr: 0x0000000020001000
+  esr: 0x0000000092000006 (Data Abort) byte read Translation fault
+Instructions
+    0x1d0742b6c:  11 0a 3f d7   blraa   x16, x17
+    0x1d0742b70:  e8 03 00 91   mov     x8, sp
+    0x1d0742b74:  08 01 0c cb   sub     x8, x8, x12
+    0x1d0742b78:  a8 03 12 f8   stur    x8, [fp, #-0xe0]
+    0x1d0742b7c:  1f 01 00 91   mov     sp, x8
+    0x1d0742b80:  73 02 40 f9   ldr     x19, [x19]
+    0x1d0742b84:  68 fe 7e d3   lsr     x8, x19, #0x3e
+    0x1d0742b88:  b3 83 14 f8   stur    x19, [fp, #-0xb8]
+    0x1d0742b8c:  48 1f 00 b5   cbnz    x8, 0x1d0742f74
+    0x1d0742b90:  68 e2 7d 92   and     x8, x19, #0xffffffffffffff8
+PC=>0x1d0742b94:  1b 09 40 f9   ldr     x27, [x8, #0x10]
+    0x1d0742b98:  e0 03 13 aa   mov     x0, x19
+    0x1d0742b9c:  2d fa 73 94   bl      0x1d2441450
+    0x1d0742ba0:  1b 20 00 b4   cbz     x27, 0x1d0742fa0
+    0x1d0742ba4:  7f 07 00 f1   cmp     x27, #0x1
+    0x1d0742ba8:  2b 22 00 54   b.lt    0x1d0742fec
+    0x1d0742bac:  a8 23 00 d1   sub     x8, fp, #0x8
+    0x1d0742bb0:  14 01 10 f8   stur    x20, [x8, #-0x100]
+    0x1d0742bb4:  16 00 80 d2   mov     x22, #0
+    0x1d0742bb8:  15 00 80 d2   mov     x21, #0
+
+
+VM Summary:
+ReadOnly portion of Libraries: Total=1.6G resident=0K(0%) swapped_out_or_unallocated=1.6G(100%)
+Writable regions: Total=44.5M written=0K(0%) resident=0K(0%) swapped_out=0K(0%) unallocated=44.5M(100%)
+
+                                VIRTUAL   REGION 
+REGION TYPE                        SIZE    COUNT (non-coalesced) 
+===========                     =======  ======= 
+Activity Tracing                   256K        1 
+ColorSync                           64K        4 
+CoreAnimation                       32K        2 
+CoreData                            32K        1 
+Dispatch continuations            6144K        1 
+Foundation                          16K        1 
+Kernel Alloc Once                   32K        1 
+MALLOC                            33.7M       16 
+MALLOC guard page                   96K        6 
+SMOOTH                               24        2 
+SQLite page cache                  384K        3 
+STACK GUARD                        112K        7 
+Stack                             4272K        7 
+__AUTH                            5270K      596 
+__AUTH_CONST                      48.8M     1061 
+__CTF                               824        1 
+__DATA                            38.0M     1053 
+__DATA_CONST                      58.5M     1068 
+__DATA_DIRTY                      12.2M      972 
+__FONT_DATA                        176K        2 
+__HIB                             1368K        1 
+__INFO_FILTER                         8        1 
+__LINKEDIT                       385.7M        3 
+__OBJC_RO                         86.6M        1 
+__OBJC_RW                         2748K        1 
+__TEXT                             1.2G     1079 
+dyld private memory                272K        1 
+mapped file                       61.1M       17 
+shared memory                       80K        4 
+===========                     =======  ======= 
+TOTAL                              1.9G     5913 

@@ -1,0 +1,269 @@
+[07Feb2023 16:58:03] - Crash
+
+Process:        Contacts [1789]
+Path:           /private/var/containers/Bundle/Application/EABE31B2-C873-4B92-BD90-105BA1B75DAD/Contacts.app/Contacts
+Parent:         launchd [1]
+Hardware Model: iPhone15,2
+OS Version:     iPhone OS 16.3
+BuildID:        20D47
+LockdownMode:            1
+Was Unlocked Since Boot: 1
+Is Locked:               0
+Shared Cache:        91c6d8c7-229d-3773-9d23-bd8701d073b1 base: 0x1ba44c000 size: 2950856704
+
+Exception Type:      EXC_CRASH (SIGABRT) 
+ASI:
+    libsystem_c.dylib:
+      - abort() called
+
+Thread 544925: queue: com.apple.main-thread (Crashed)
+  00: libsystem_kernel.dylib  0x1feeab674 __pthread_kill + 8
+  01: libsystem_pthread.dylib 0x20f60f1ac pthread_kill + 268
+  02: libsystem_c.dylib       0x1c8a0cc8c abort + 180
+  03: libc++abi.dylib         0x20f54eb8c abort_message + 132
+  04: libc++abi.dylib         0x20f53ea80 demangling_terminate_handler() + 336
+  05: libobjc.A.dylib         0x1ba521d3c _objc_terminate() + 144
+  06: libc++abi.dylib         0x20f54df28 std::__terminate(void (*)()) + 20
+  07: libc++abi.dylib         0x20f54dec4 std::terminate() + 56
+  08: libdispatch.dylib       0x1c89a8f9c _dispatch_client_callout + 40
+  09: libdispatch.dylib       0x1c89b77f4 _dispatch_main_queue_drain + 928
+  10: libdispatch.dylib       0x1c89b7444 _dispatch_main_queue_callback_4CF + 44
+  11: CoreFoundation          0x1c14216c8 __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 16
+  12: CoreFoundation          0x1c140302c __CFRunLoopRun + 2036
+  13: CoreFoundation          0x1c1407eb0 CFRunLoopRunSpecific + 612
+  14: GraphicsServices        0x1fb5fd368 GSEventRunModal + 164
+  15: UIKitCore               0x1c38fd668 -[UIApplication _run] + 888
+  16: UIKitCore               0x1c38fd2cc UIApplicationMain + 340
+  17: Contacts                0x10486eb20 
+  18: dyld                    0x1dfd00960 start + 2528
+Thread 544925 ARM_THREAD_STATE64
+   x0: 0x0000000000000000
+   x1: 0x0000000000000000
+   x2: 0x0000000000000000
+   x3: 0x0000000000000000
+   x4: 0x000000020f5520f5
+   x5: 0x000000016b59e260
+   x6: 0x000000000000006e
+   x7: 0xffffffff00000500
+   x8: 0xc433b63849a94115
+   x9: 0xc474363a5ed88d15
+  x10: 0x0000000000000200
+  x11: 0x000000000000000b
+  x12: 0x000000000000000b
+  x13: 0x00000000001ff800
+  x14: 0x00000000000007fb
+  x15: 0x00000000dee2d026
+  x16: 0x0000000000000148
+  x17: 0x000000021771cc00 _main_thread
+  x18: 0x0000000000000000
+  x19: 0x0000000000000006
+  x20: 0x0000000000000103
+  x21: 0x000000021771cce0 0x00000000000000e0 _main_thread
+  x22: 0x0000000000000000
+  x23: 0x0000000000000114
+  x24: 0x0000000000000000
+  x25: 0x000000021771cce0 0x00000000000000e0 _main_thread
+  x26: 0x0000000281e00940
+  x27: 0x000000000000000f
+  x28: 0x0000000000000000
+   fp: 0x000000016b59e1d0
+   lr: 0x000000020f60f1ac
+   sp: 0x000000016b59e1b0
+   pc: 0x00000001feeab674 matches_crash_frame=1
+  far: 0x0000000214b60560
+ cpsr: 0x0000000040001000
+  esr: 0x0000000056000080  Address size fault
+
+Thread 544929:
+  00: libsystem_pthread.dylib 0x20f608b90 start_wqthread
+
+Thread 544931: name: com.apple.uikit.eventfetch-thread
+  00: libsystem_kernel.dylib  0x1feea4da8 mach_msg2_trap + 8
+  01: libsystem_kernel.dylib  0x1feeb7a1c mach_msg2_internal + 80
+  02: libsystem_kernel.dylib  0x1feeb7c5c mach_msg_overwrite + 388
+  03: libsystem_kernel.dylib  0x1feea52ec mach_msg + 24
+  04: CoreFoundation          0x1c1401ac4 __CFRunLoopServiceMachPort + 160
+  05: CoreFoundation          0x1c1402d08 __CFRunLoopRun + 1232
+  06: CoreFoundation          0x1c1407eb0 CFRunLoopRunSpecific + 612
+  07: Foundation              0x1bb730054 -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 212
+  08: Foundation              0x1bb72ff3c -[NSRunLoop(NSRunLoop) runUntilDate:] + 64
+  09: UIKitCore               0x1c3a326a4 -[UIEventFetcher threadMain] + 436
+  10: Foundation              0x1bb749518 __NSThread__start__ + 716
+  11: libsystem_pthread.dylib 0x20f6096cc _pthread_start + 148
+  12: libsystem_pthread.dylib 0x20f608ba4 thread_start + 8
+
+Thread 544934:
+  00: libsystem_pthread.dylib 0x20f608b90 start_wqthread
+
+Thread 544982:
+  00: libsystem_kernel.dylib  0x1feea4da8 mach_msg2_trap + 8
+  01: libsystem_kernel.dylib  0x1feeb7a1c mach_msg2_internal + 80
+  02: libsystem_kernel.dylib  0x1feeb7c5c mach_msg_overwrite + 388
+  03: libsystem_kernel.dylib  0x1feea52ec mach_msg + 24
+  04: CoreFoundation          0x1c1401ac4 __CFRunLoopServiceMachPort + 160
+  05: CoreFoundation          0x1c1402d08 __CFRunLoopRun + 1232
+  06: CoreFoundation          0x1c1407eb0 CFRunLoopRunSpecific + 612
+  07: Foundation              0x1bb730054 -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 212
+  08: Foundation              0x1bb72ff3c -[NSRunLoop(NSRunLoop) runUntilDate:] + 64
+  09: AssistantServices       0x1d7773790 -[AFContextManager startCenter:] + 220
+  10: Foundation              0x1bb749518 __NSThread__start__ + 716
+  11: libsystem_pthread.dylib 0x20f6096cc _pthread_start + 148
+  12: libsystem_pthread.dylib 0x20f608ba4 thread_start + 8
+
+Thread 544984:
+  00: libsystem_pthread.dylib 0x20f608b90 start_wqthread
+
+Thread 544987:
+  00: libsystem_pthread.dylib 0x20f608b90 start_wqthread
+
+Thread 545003:
+  00: libsystem_pthread.dylib 0x20f608b90 start_wqthread
+
+Thread 545004:
+  00: libsystem_pthread.dylib 0x20f608b90 start_wqthread
+
+Thread 545008:
+  00: libsystem_pthread.dylib 0x20f608b90 start_wqthread
+
+Last Exception Backtrace:
+  00: CoreFoundation        0x1c1390e38 __exceptionPreprocess + 164
+  01: libobjc.A.dylib       0x1ba51b8d8 objc_exception_throw + 60
+  02: Foundation            0x1bbc338ec _userInfoForFileAndLine
+  03: UIKitCore             0x1c43d1d94 -[UITableView _Bug_Detected_In_Client_Of_UITableView_Invalid_Number_Of_Sections:] + 96
+  04: UIKitCore             0x1c380e770 -[UITableView _endCellAnimationsWithContext:] + 8240
+  05: UIKitCore             0x1c37cd330 -[UITableView endUpdatesWithContext:] + 116
+  06: ContactsUI            0x1c96bb904 -[CNContactContentUnitaryViewController _addGroup:afterGroup:forTableView:animated:] + 272
+  07: ContactsUI            0x1c96bc7e4 -[CNContactContentUnitaryViewController _addFaceTimeGroupAnimated:] + 224
+  08: ContactsUI            0x1c96bcbb8 __61-[CNContactContentUnitaryViewController _reloadFaceTimeGroup]_block_invoke + 204
+  09: ContactsFoundation    0x1cced885c -[_CNBlockObserver observerDidReceiveResult:] + 176
+  10: ContactsFoundation    0x1ccedc970 __26-[CNObservable observeOn:]_block_invoke_3 + 52
+  11: ContactsFoundation    0x1cced74ec -[_CNInlineScheduler performBlock:qualityOfService:] + 52
+  12: ContactsFoundation    0x1cced6944 -[_CNMainThreadScheduler performBlock:] + 56
+  13: ContactsFoundation    0x1ccee2f6c __26-[CNObservable observeOn:]_block_invoke_2 + 160
+  14: ContactsFoundation    0x1cced885c -[_CNBlockObserver observerDidReceiveResult:] + 176
+  15: ContactsFoundation    0x1cced885c -[_CNBlockObserver observerDidReceiveResult:] + 176
+  16: ContactsFoundation    0x1ccedcd64 __55+[CNObservable observableWithFuture:schedulerProvider:]_block_invoke_2 + 56
+  17: ContactsFoundation    0x1cced7660 -[_CNImmediateScheduler performBlock:qualityOfService:] + 204
+  18: ContactsFoundation    0x1ccee536c __38-[CNFuture addSuccessBlock:scheduler:]_block_invoke + 136
+  19: ContactsFoundation    0x1ccee0c18 __38-[_CNBlockFutureImpl addSuccessBlock:]_block_invoke + 100
+  20: ContactsFoundation    0x1ccef24a0 __65-[_CNImmediateScheduler performCancelableBlock:qualityOfService:]_block_invoke + 44
+  21: ContactsFoundation    0x1cced86fc -[_CNImmediateScheduler performCancelableBlock:qualityOfService:] + 304
+  22: ContactsFoundation    0x1cced6e70 -[CNSuspendableSchedulerDecorator performCancelableBlock:qualityOfService:] + 292
+  23: ContactsFoundation    0x1cced6d24 -[CNSuspendableSchedulerDecorator performBlock:qualityOfService:] + 132
+  24: ContactsFoundation    0x1cced6800 -[_CNBlockFutureImpl addSuccessBlock:] + 152
+  25: ContactsFoundation    0x1cceda2c4 -[CNFuture addSuccessBlock:scheduler:] + 148
+  26: ContactsFoundation    0x1cceda15c __55+[CNObservable observableWithFuture:schedulerProvider:]_block_invoke + 184
+  27: ContactsFoundation    0x1ccedf174 __31-[CNObservable onErrorHandler:]_block_invoke + 372
+  28: ContactsFoundation    0x1ccedf4e4 __26-[CNObservable observeOn:]_block_invoke + 436
+  29: ContactsUI            0x1c9653480 +[CNUIIDSAvailabilityProvider(ContactsUI) validateHandlesForFaceTime:availabilityProvider:schedulerProvider:handler:] + 244
+  30: ContactsUI            0x1c96bca44 -[CNContactContentUnitaryViewController _reloadFaceTimeGroup] + 540
+  31: ContactsUI            0x1c96d147c -[CNContactContentUnitaryViewController reloadDataPreservingChanges:] + 1008
+  32: ContactsUI            0x1c96d2f88 -[CNContactContentUnitaryViewController setContact:shouldScrollToTop:] + 3124
+  33: ContactsUI            0x1c96d1cc8 -[CNContactContentUnitaryViewController _refetchContact] + 816
+  34: ContactsUI            0x1c96d213c __79-[CNContactContentUnitaryViewController contactStoreDidChangeWithNotification:]_block_invoke + 408
+  35: ContactsFoundation    0x1cced74ec -[_CNInlineScheduler performBlock:qualityOfService:] + 52
+  36: ContactsFoundation    0x1cced6944 -[_CNMainThreadScheduler performBlock:] + 56
+  37: ContactsUI            0x1c96d1f80 -[CNContactContentUnitaryViewController contactStoreDidChangeWithNotification:] + 168
+  38: CoreFoundation        0x1c13be3b4 __CFNOTIFICATIONCENTER_IS_CALLING_OUT_TO_AN_OBSERVER__ + 148
+  39: CoreFoundation        0x1c1465444 ___CFXRegistrationPost_block_invoke + 88
+  40: CoreFoundation        0x1c14486f4 _CFXRegistrationPost + 440
+  41: CoreFoundation        0x1c13d29b8 _CFXNotificationPost + 704
+  42: Foundation            0x1bb74ad0c -[NSNotificationCenter postNotificationName:object:userInfo:] + 92
+  43: Contacts              0x1ccfbdbac __131-[CNChangesNotifierProxy receiveNotificationName:fromSender:saveIdentifier:userInfo:calledFromNotifierQueue:isFromExternalProcess:]_block_invoke_3 + 68
+  44: Contacts              0x1ccfd07ec __41-[_CNContactsLogger postingNotification:]_block_invoke_2 + 44
+  45: libsystem_trace.dylib 0x1d8295108 os_activity_apply_f + 88
+  46: Contacts              0x1ccfbe260 -[_CNContactsLogger postingNotification:] + 248
+  47: Contacts              0x1ccfc44d0 __131-[CNChangesNotifierProxy receiveNotificationName:fromSender:saveIdentifier:userInfo:calledFromNotifierQueue:isFromExternalProcess:]_block_invoke_2 + 156
+  48: Contacts              0x1ccfd18ac -[CNChangesNotifierProxy stopSupressionOfNotificationName:] + 220
+  49: Contacts              0x1ccfcf018 -[CNAggregateContactStore executeSaveRequest:error:] + 356
+  50: ContactsUI            0x1c9609c0c -[CNMutableContact(UIAdditions) saveContactInStore:groups:container:request:] + 696
+  51: ContactsUI            0x1c95020c4 -[CNMutableContact(UIAdditions) saveContactInStore:group:container:request:] + 164
+  52: ContactsUI            0x1c950c2ac -[CNPropertyGroupItem saveChangesImmediately:] + 1920
+  53: ContactsUI            0x1c963515c -[CNPropertyNoteCell textViewEditingDidEnd:] + 96
+  54: CoreFoundation        0x1c13be3b4 __CFNOTIFICATIONCENTER_IS_CALLING_OUT_TO_AN_OBSERVER__ + 148
+  55: CoreFoundation        0x1c1465444 ___CFXRegistrationPost_block_invoke + 88
+  56: CoreFoundation        0x1c14486f4 _CFXRegistrationPost + 440
+  57: CoreFoundation        0x1c13d29b8 _CFXNotificationPost + 704
+  58: Foundation            0x1bb74ad0c -[NSNotificationCenter postNotificationName:object:userInfo:] + 92
+  59: UIKitCore             0x1c44b0c68 -[UITextView _notifyDidEndEditing] + 108
+  60: UIKitCore             0x1c44b0aa0 -[UITextView _cleanUpForResignFirstResponder] + 124
+  61: UIKitCore             0x1c377ad40 -[UITextView resignFirstResponder] + 104
+  62: UIKitCore             0x1c380f4a8 -[UITableView reloadData] + 508
+  63: ContactsUI            0x1c96d155c -[CNContactContentUnitaryViewController reloadDataPreservingChanges:] + 1232
+  64: ContactsUI            0x1c96d2f88 -[CNContactContentUnitaryViewController setContact:shouldScrollToTop:] + 3124
+  65: ContactsUI            0x1c96d1cc8 -[CNContactContentUnitaryViewController _refetchContact] + 816
+  66: ContactsUI            0x1c96d213c __79-[CNContactContentUnitaryViewController contactStoreDidChangeWithNotification:]_block_invoke + 408
+  67: ContactsFoundation    0x1cced74ec -[_CNInlineScheduler performBlock:qualityOfService:] + 52
+  68: ContactsFoundation    0x1cced6944 -[_CNMainThreadScheduler performBlock:] + 56
+  69: ContactsUI            0x1c96d1f80 -[CNContactContentUnitaryViewController contactStoreDidChangeWithNotification:] + 168
+  70: CoreFoundation        0x1c13be3b4 __CFNOTIFICATIONCENTER_IS_CALLING_OUT_TO_AN_OBSERVER__ + 148
+  71: CoreFoundation        0x1c1465444 ___CFXRegistrationPost_block_invoke + 88
+  72: CoreFoundation        0x1c14486f4 _CFXRegistrationPost + 440
+  73: CoreFoundation        0x1c13d29b8 _CFXNotificationPost + 704
+  74: Foundation            0x1bb74ad0c -[NSNotificationCenter postNotificationName:object:userInfo:] + 92
+  75: Contacts              0x1ccfbdbac __131-[CNChangesNotifierProxy receiveNotificationName:fromSender:saveIdentifier:userInfo:calledFromNotifierQueue:isFromExternalProcess:]_block_invoke_3 + 68
+  76: Contacts              0x1ccfd07ec __41-[_CNContactsLogger postingNotification:]_block_invoke_2 + 44
+  77: libsystem_trace.dylib 0x1d8295108 os_activity_apply_f + 88
+  78: Contacts              0x1ccfbe260 -[_CNContactsLogger postingNotification:] + 248
+  79: Contacts              0x1ccfc44d0 __131-[CNChangesNotifierProxy receiveNotificationName:fromSender:saveIdentifier:userInfo:calledFromNotifierQueue:isFromExternalProcess:]_block_invoke_2 + 156
+  80: Contacts              0x1cd036c68 -[CNChangesNotifierProxy receiveNotificationName:fromSender:saveIdentifier:userInfo:calledFromNotifierQueue:isFromExternalProcess:] + 396
+  81: Contacts              0x1ccfbfc04 __58-[CNChangesNotifierProxy receiveExternalNotificationName:]_block_invoke + 64
+  82: ContactsFoundation    0x1cced74ec -[_CNInlineScheduler performBlock:qualityOfService:] + 52
+  83: ContactsFoundation    0x1cced6944 -[_CNMainThreadScheduler performBlock:] + 56
+  84: ContactsFoundation    0x1cceed608 -[CNCoalescingTimer nts_letSomeoneIn] + 84
+  85: ContactsFoundation    0x1ccee1a88 CNRunWithLock + 64
+  86: ContactsFoundation    0x1cceec8e4 -[CNCoalescingTimer handleEvent] + 116
+  87: Contacts              0x1ccfbf9f0 -[CNChangesNotifierProxy receiveExternalNotificationName:] + 336
+  88: Contacts              0x1ccfbf378 CNChangesNotifierCFNotificationCenterCallback + 112
+  89: CoreFoundation        0x1c13be3f0 __CFNOTIFICATIONCENTER_IS_CALLING_OUT_TO_AN_OBSERVER__ + 208
+  90: CoreFoundation        0x1c1465444 ___CFXRegistrationPost_block_invoke + 88
+  91: libdispatch.dylib     0x1c89a7460 _dispatch_call_block_and_release + 32
+  92: libdispatch.dylib     0x1c89a8f88 _dispatch_client_callout + 20
+  93: libdispatch.dylib     0x1c89b77f4 _dispatch_main_queue_drain + 928
+  94: libdispatch.dylib     0x1c89b7444 _dispatch_main_queue_callback_4CF + 44
+  95: CoreFoundation        0x1c14216c8 __CFRUNLOOP_IS_SERVICING_THE_MAIN_DISPATCH_QUEUE__ + 16
+  96: CoreFoundation        0x1c140302c __CFRunLoopRun + 2036
+  97: CoreFoundation        0x1c1407eb0 CFRunLoopRunSpecific + 612
+  98: GraphicsServices      0x1fb5fd368 GSEventRunModal + 164
+  99: UIKitCore             0x1c38fd668 -[UIApplication _run] + 888
+  100: UIKitCore            0x1c38fd2cc UIApplicationMain + 340
+  101: Contacts             0x10486eb20 
+  102: dyld                 0x1dfd00960 start + 2528
+
+VM Summary:
+ReadOnly portion of Libraries: Total=1.2G resident=0K(0%) swapped_out_or_unallocated=1.2G(100%)
+Writable regions: Total=615.5M written=0K(0%) resident=0K(0%) swapped_out=0K(0%) unallocated=615.5M(100%)
+
+                                VIRTUAL   REGION 
+REGION TYPE                        SIZE    COUNT (non-coalesced) 
+===========                     =======  ======= 
+Activity Tracing                   256K        1 
+CG raster data                    1696K       16 
+ColorSync                           64K        4 
+CoreAnimation                     1888K       39 
+CoreData Object IDs               4112K        2 
+Foundation                          16K        1 
+Kernel Alloc Once                   32K        1 
+MALLOC                           600.4M      110 
+MALLOC guard page                  192K       12 
+SQLite page cache                 3584K       28 
+STACK GUARD                        160K       10 
+Stack                             5904K       10 
+VM_ALLOCATE                        304K        5 
+__AUTH                            4742K      602 
+__AUTH_CONST                      34.5M      873 
+__CTF                               756        1 
+__DATA                            22.9M      860 
+__DATA_CONST                      44.7M      878 
+__DATA_DIRTY                      3943K      724 
+__FONT_DATA                        2352        1 
+__LINKEDIT                       307.1M        3 
+__OBJC_CONST                      8897K      616 
+__OBJC_RO                         78.9M        1 
+__OBJC_RW                         2440K        1 
+__TEXT                           882.5M      889 
+dyld private memory                256K        1 
+mapped file                      235.5M       86 
+shared memory                       48K        3 
+===========                     =======  ======= 
+TOTAL                              2.2G     5778 

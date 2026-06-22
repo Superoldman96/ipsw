@@ -1,0 +1,78 @@
+[24Jul2025 16:05:52] - SymptomsIO - analyticsd
+
+Event       disk writes (action taken: none)
+Process     analyticsd [122]
+Path        /System/Library/PrivateFrameworks/CoreAnalytics.framework/Support/analyticsd
+OS Version  iPhone OS 26.0 (Build 23A5297m)
+Hardware    iPhone17,1
+
+Limit:
+  Writes:           1073.74 MB of file backed memory dirtied over 8588 seconds (125.03 KB per second average), exceeding limit of 12.43 KB per second over 86400 seconds
+  Writes limit:     1073.74 MB
+  Limit duration:   86400s
+  Writes caused:    1073.74 MB
+  Writes duration:  8588s
+  Duration:         8587.64s
+  Duration Sampled: 8521.32s (event starts 63.75s before samples, event ends 2.57s after samples)
+  Steps:            936 (10.49 MB/step)
+
+Heaviest stack for analyticsd:
+   0: 61 samples  libsystem_pthread.dylib  + 2240
+   1: 61 samples  libsystem_pthread.dylib  + 5048
+   2: 61 samples  libdispatch.dylib        + 85188
+   3: 61 samples  libdispatch.dylib        + 86988
+   4: 61 samples  libdispatch.dylib        + 44836
+   5: 52 samples  libdispatch.dylib        + 41648
+   6: 52 samples  libdispatch.dylib        + 126460
+   7: 52 samples  libdispatch.dylib        + 41648
+   8: 52 samples  libdispatch.dylib        + 123028
+   9: 52 samples  libdispatch.dylib        + 112660
+  10: 52 samples  libxpc.dylib             + 78872
+  11: 52 samples  libxpc.dylib             + 71732
+  12: 52 samples  analyticsd               + 6324
+  13: 52 samples  analyticsd               + 5864
+  14: 52 samples  libdispatch.dylib        + 71840
+  15: 52 samples  libdispatch.dylib        + 112588
+  16: 52 samples  analyticsd               + 8224
+  17: 52 samples  analyticsd               + 12000
+  18: 52 samples  analyticsd               + 28892
+  19: 52 samples  libdispatch.dylib        + 71840
+  20: 52 samples  libdispatch.dylib        + 112588
+  21: 52 samples  analyticsd               + 26936
+  22: 52 samples  analyticsd               + 50256
+  23: 52 samples  analyticsd               + 54692
+  24: 52 samples  analyticsd               + 54916
+  25: 52 samples  libdispatch.dylib        + 71840
+  26: 52 samples  libdispatch.dylib        + 112588
+  27: 38 samples  analyticsd               + 50984
+  28: 38 samples  analyticsd               + 38196
+  29: 38 samples  analyticsd               + 35892
+  30: 37 samples  analyticsd               + 36544
+  31: 37 samples  analyticsd               + 119696
+  32: 36 samples  analyticsd               + 125360
+  33: 36 samples  analyticsd               + 125568
+  34: 36 samples  analyticsd               + 75084
+  35: 36 samples  analyticsd               + 74576
+  36: 36 samples  analyticsd               + 128212
+  37: 36 samples  analyticsd               + 128348
+  38: 30 samples  analyticsd               + 128472
+  39: 30 samples  analyticsd               + 128684
+  40: 30 samples  analyticsd               + 62668
+  41: 30 samples  analyticsd               + 129068
+  42: 30 samples  analyticsd               + 131392
+  43: 30 samples  libdispatch.dylib        + 71840
+  44: 30 samples  libdispatch.dylib        + 112588
+  45: 30 samples  analyticsd               + 132420
+  46: 30 samples  analyticsd               + 131880
+  47: 30 samples  analyticsd               + 148464
+  48: 30 samples  analyticsd               + 148328
+  49: 30 samples  libsqlite3.dylib         + 33116
+  50: 25 samples  libsqlite3.dylib         + 191260
+  51: 25 samples  libsqlite3.dylib         + 233588
+  52: 25 samples  libsqlite3.dylib         + 92484
+  53: 25 samples  libsqlite3.dylib         + 259504
+  54: 25 samples  libsqlite3.dylib         + 260616
+  55: 25 samples  libsqlite3.dylib         + 327332
+  56: 25 samples  libsqlite3.dylib         + 696848
+  57: 25 samples  libsqlite3.dylib         + 328236
+  58: 25 samples  libsystem_kernel.dylib   + 27704
